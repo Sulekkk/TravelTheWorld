@@ -1,0 +1,28 @@
+.text-y {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.text-x {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.stories__card:hover .card-text {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  opacity: 1;
+}
+
+.stories__card:hover .img-y {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.stories__card:hover .img-x {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  opacity: 0;
+}
+/*# sourceMappingURL=animations.css.map */

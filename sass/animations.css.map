@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,OAAO,CAAA;EACH,SAAS,EAAE,eAAe;CAC7B;;AACD,AAAA,OAAO,CAAA;EACH,SAAS,EAAE,eAAe;CAC7B;;AACD,AAAA,cAAc,AAAA,MAAM,CAAC,UAAU,CAAC;EAC5B,SAAS,EAAE,SAAS;EACpB,OAAO,EAAE,CAAC;CACb;;AACD,AAAA,cAAc,AAAA,MAAM,CAAC,MAAM,CAAA;EACvB,SAAS,EAAE,eAAe;EAC1B,OAAO,EAAE,CAAC;CACb;;AACD,AAAA,cAAc,AAAA,MAAM,CAAC,MAAM,CAAA;EACvB,SAAS,EAAE,eAAe;EAC1B,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "animations.scss",
+        "colors.scss"
+    ],
+    "names": [],
+    "file": "animations.css"
+}

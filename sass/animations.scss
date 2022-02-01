@@ -1,0 +1,20 @@
+@import 'colors';
+
+.text-y{
+    transform: rotateY(180deg);
+}
+.text-x{
+    transform: rotateX(180deg);
+}
+.stories__card:hover .card-text {
+    transform: rotate(0);
+    opacity: 1;
+}
+.stories__card:hover .img-y{
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+.stories__card:hover .img-x{
+    transform: rotateX(180deg);
+    opacity: 0;
+}
