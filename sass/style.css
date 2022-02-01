@@ -418,6 +418,12 @@ nav .desktop {
   font-size: 2rem;
 }
 
+footer {
+  background-color: #000;
+  height: 30vh;
+  width: 100%;
+}
+
 .text-y {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
@@ -618,6 +624,41 @@ nav .desktop {
   }
   .boxes__wrapper .box-two, .boxes__wrapper .box-three {
     margin-top: 0;
+  }
+  .carousel {
+    height: 80vh;
+  }
+  .carousel__container {
+    width: 80%;
+    height: 80%;
+  }
+  .carousel::before {
+    height: 80vh;
+  }
+  .counters {
+    margin-top: 0;
+    padding: 10rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .counters__container i {
+    font-size: 10rem;
+  }
+  .counters__container .counter {
+    margin-top: 3rem;
+    font-size: 3rem;
+  }
+  .counters__container span {
+    margin-top: 1rem;
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

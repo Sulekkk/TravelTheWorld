@@ -298,6 +298,12 @@ nav{
     }
 }
 
+footer{
+    background-color: #000;
+    height: 30vh;
+    width: 100%;
+}
+
 .text-y{
     transform: rotateY(180deg);
 }
@@ -462,6 +468,38 @@ nav{
             }
             .box-two, .box-three{
                 margin-top: 0;
+            }
+        }
+    }
+
+    .carousel{
+        height: 80vh;
+        &__container{
+            width: 80%;
+            height: 80%;
+        }
+    }
+    .carousel::before{
+        height: 80vh;
+    }
+
+    .counters{
+        margin-top: 0;
+        padding: 10rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        &__container{
+            i{
+                font-size: 10rem;
+            }
+            .counter{
+                margin-top: 3rem;
+                font-size: 3rem;
+            }
+            span{
+                margin-top: 1rem;
+                font-size: 2rem;
             }
         }
     }
