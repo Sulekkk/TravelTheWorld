@@ -6,10 +6,21 @@ const slides = document.querySelectorAll('.slide')
 const leftBtn = document.getElementById('left')
 const rightBtn  = document.getElementById('right')
 const carouselBg = document.querySelector('.carousel')
+const menuItems = document.querySelectorAll('.item')
+const buttons = document.querySelectorAll('.ripple')
 
 const handleBurger = () =>{
     burger.classList.toggle('is-active')
     menu.classList.toggle('active')
+    document.body.classList.toggle('stop-scroll')
+    
+    menuItems.forEach(menuItem=>{
+        menuItem.addEventListener('click', ()=>{
+            document.body.classList.remove('stop-scroll')
+            burger.classList.remove('is-active')
+            menu.classList.remove('active')
+        })
+    })
 }
 
 counters.forEach(counter =>{
@@ -69,6 +80,27 @@ const setActiveSlide = ()=>{
     slides[activeSlide].classList.add('active')
 }
 
+buttons.forEach(button => {
+    button.addEventListener('click', (e) =>{
+        const x = e.clientX
+        const y = e.clientY
+        
+        const buttonTop = e.target.offsetTop
+        const buttonLeft = e.target.offsetLeft
+
+        const xInside = x - buttonLeft
+        const yInside = y - buttonTop
+
+        const circle = document.createElement('span')
+        circle.classList.add('circle')
+        circle.style.top = yInside + 'px'
+        circle.style.left = xInside + 'px'
+
+        button.append(circle)
+
+        setTimeout(()=> circle.remove(), 500)
+    })
+})
 
 rightBtn.addEventListener('click', changeRight)
 leftBtn.addEventListener('click', changeLeft)

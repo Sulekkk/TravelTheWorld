@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
 @import 'colors';
-@import 'animations';
+@import 'animations'; 
 
 *{
     margin: 0;
@@ -15,6 +15,11 @@ body{
 
 html{
     font-size: 62.5%;
+}
+
+.stop-scroll{
+    height: 100vh;
+    overflow: hidden;
 }
 
 nav{
@@ -45,7 +50,6 @@ nav{
                     right: -1rem;
                     bottom: 0;
                 }
-
             }
             .burger{
                 display: flex;
@@ -82,18 +86,17 @@ nav{
 .first{
     &__pair{
         .img{
-            height: 46vh;
+            height: 50vh;
             background-size:cover;
             background-repeat: no-repeat;
             background-position: center;
         }
         .text{
-            height: 46vh;
             padding: 5rem 3rem;
             background-color: #000;
             color: white;
             h2{
-                font-size: 3.4rem;
+                font-size:3.2rem;
                 opacity: 80%;
                 text-transform: uppercase;
             }
@@ -102,28 +105,12 @@ nav{
                 font-size: 1.6rem;
                 opacity: 50%;
             }
-            .bottom{
-                display: flex;
-                gap: 2rem;
-                margin-top: 3rem;
-                opacity: 80%;
-                h3{
-                    font-size: 1.6rem;
-                }
-                i{
-                    font-size: 2rem;
-                }
-            }
         }
     }
 
     &__pair-two, &__pair-three{
         text-align: right;
-        .img{
-            height: 50vh;
-        }
         .text{
-            height: 50vh;
             background-color: $additional;
             color: #000;
         }
@@ -207,28 +194,24 @@ nav{
         padding: 0 1rem;
         margin: 2rem 0 4rem 0;
     }
-    &__box{
-        h3{
-            font-size: 2.6rem;
+    &__wrapper{
+        .box{
+            h3{
+                font-size: 2.6rem;
+            }
+            i{
+                font-size: 5rem;
+                margin: 3rem 0;
+            }
+            p{
+                margin: 0;
+                padding: 0 2rem;
+                opacity: 50%;
+            }
         }
-        i{
-            font-size: 5rem;
-            margin: 3rem 0;
+        .box-two, .box-three{
+            margin-top: 5rem;
         }
-        p{
-            margin: 0;
-            padding: 0 2rem;
-            opacity: 50%;
-        }
-    }
-    &__box-two, &__box-three{
-        margin-top: 5rem;
-    }
-}
-
-.video{
-    video{
-        width: 100%;
     }
 }
 
@@ -332,4 +315,154 @@ nav{
 .stories__card:hover .img-x{
     transform: rotateX(180deg);
     opacity: 0;
+}
+
+@media(min-width:768px){
+    nav{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        .mobile{
+            display: none;
+        }
+        .desktop{
+            padding: 2rem 6rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .logo{
+                p{
+                    font-size: 3rem;
+                    line-height: 8vh;
+                    color: $primary;
+                    padding-left: 1rem;
+                    span{
+                        // color: $secondary;
+                        position: relative;
+                    }
+                }
+                span::after{
+                    content: '';
+                    background-color: $primary;
+                    position: absolute;
+                    width: 60%;
+                    height: 2px;
+                    right: -1rem;
+                    bottom: 0;
+                }
+            }
+            .items{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 4rem;
+                width: 100%;
+                a{
+                    text-decoration: none;
+                    color: $primary;
+                    font-size: 2.4rem;
+                }
+            }
+            .btn{
+                display: flex;
+                align-items: center;
+                .nav-btn{
+                    background-color: #000;
+                    color: rgba($color: #fff, $alpha: 0.8);
+                    padding: 1rem 3rem;
+                    border: none;
+                    letter-spacing:0.2rem;
+                    overflow: hidden;
+                    cursor: pointer;
+                    position: relative;
+                    .circle{
+                        position: absolute;
+                        background-color: #fff;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        transform: translate(-50%,-50%) scale(0);
+                        animation: scale .5s ease-out;
+                    }
+                }
+            }
+        }
+    }
+    .first{
+        &__pair{
+            display: flex;
+            .img{
+                height: 75vh;
+                width: 100%;
+                order: 1;
+            }
+            .text{
+                padding: 8rem 8rem;
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h2{
+                    font-size: 5rem;
+                }
+                p{
+                    font-size:2rem;
+                }
+            }
+        }
+    
+        &__pair-two{
+            .img{
+                order: 0;
+            }
+            .text{
+                background-color: $additional;
+                color: #000;
+            }
+        }
+        &__pair-three{
+            text-align: right;
+            .text{
+                background-color: $additional;
+                color: #000;
+            }
+        }
+    
+        &__pair-three{
+            text-align: left;
+        }
+    }
+
+    .stories{
+        display: flex;
+        &__card{
+            width: 25%;
+        }
+    }
+    .boxes{
+        width: 80%;
+        margin: 6rem auto;
+        h2{
+            font-size: 4rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+        &__wrapper{
+            display: flex;
+            margin-top: 5rem;
+            .box{
+                h3{
+                    font-size: 3rem;
+                }
+                i{
+                    font-size: 6rem;
+                }
+            }
+            .box-two, .box-three{
+                margin-top: 0;
+            }
+        }
+    }
 }
