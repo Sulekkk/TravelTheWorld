@@ -53,6 +53,8 @@
 body {
   font-family: 'Space Grotesk', sans-serif;
   position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 html {
@@ -266,7 +268,11 @@ nav .desktop {
   -webkit-transition: .8s;
   transition: .8s;
   opacity: 0;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.stories__card .card-text p::first-letter {
+  font-size: 3rem;
 }
 
 .boxes {
@@ -479,6 +485,45 @@ nav .desktop {
   right: -3px;
   border-top: 3px solid #fff;
   border-right: 3px solid #fff;
+}
+
+.quote {
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.quote blockquote {
+  font-size: 4rem;
+  color: #252323;
+}
+
+.quote blockquote::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 40%;
+  background-color: #252323;
+  left: 50%;
+  top: 12%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.quote i {
+  position: absolute;
+  font-size: 7rem;
+  opacity: 10%;
+}
+
+.quote .one {
+  top: 10%;
+  left: 5%;
+}
+
+.quote .two {
+  bottom: 10%;
+  right: 5%;
 }
 
 .footer {
@@ -708,6 +753,7 @@ nav .desktop {
   .first__pair .text {
     padding: 8rem 8rem;
     width: 70%;
+    height: 75vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -751,6 +797,10 @@ nav .desktop {
   }
   .stories__card {
     width: 25%;
+  }
+  .stories .card-text {
+    font-size: 1.6rem;
+    text-align: left;
   }
   .boxes {
     width: 80%;
@@ -816,6 +866,25 @@ nav .desktop {
   .carousel::before {
     height: 80vh;
   }
+  .quote {
+    padding: 10rem 0 7rem 0;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .quote blockquote {
+    font-size: 6rem;
+  }
+  .quote i {
+    font-size: 9rem;
+  }
+  .quote .one {
+    top: 20%;
+    left: 0;
+  }
+  .quote .two {
+    bottom: 14%;
+    right: 0;
+  }
   .counters {
     margin-top: 0;
     padding: 10rem 0;
@@ -859,6 +928,7 @@ nav .desktop {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    gap: 3rem;
     padding: 2rem 2rem;
   }
   .footer__wrapper--logo p {
@@ -870,6 +940,7 @@ nav .desktop {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 1rem;
+    padding-right: 9rem;
   }
   .footer__wrapper--items a {
     text-decoration: none;

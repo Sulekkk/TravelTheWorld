@@ -11,6 +11,8 @@
 body{
     font-family: 'Space Grotesk', sans-serif;
     position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 html{
@@ -176,7 +178,10 @@ nav{
             padding: 2rem;
             transition: .8s;
             opacity: 0;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
+            p::first-letter{
+                font-size: 3rem;
+            }
         }
     }
 }
@@ -351,7 +356,38 @@ nav{
         border-right: 3px solid $white;
     }
 }
-
+.quote{
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    blockquote{
+        font-size: 4rem;
+        color: $primary;
+    }
+    blockquote::before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 40%;
+        background-color: $primary;
+        left: 50%;
+        top: 12%;
+        transform: translateX(-50%);
+    }
+    i{
+        position: absolute;
+        font-size: 7rem;
+        opacity: 10%;
+    }
+    .one{
+        top: 10%;
+        left: 5%;
+    }
+    .two{
+        bottom: 10%;
+        right: 5%;
+    }
+}
 .footer{
     background-color: #000;
     width: 100%;
@@ -532,6 +568,7 @@ nav{
             .text{
                 padding: 8rem 8rem;
                 width: 70%;
+                height: 75vh;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -570,6 +607,10 @@ nav{
         display: flex;
         &__card{
             width: 25%;
+        }
+        .card-text{
+            font-size: 1.6rem;
+            text-align: left;
         }
     }
     .boxes{
@@ -639,6 +680,26 @@ nav{
         height: 80vh;
     }
 
+    .quote{
+        padding: 10rem 0 7rem 0;
+        width: 50%;
+        margin: 0 auto;
+        blockquote{
+            font-size: 6rem;
+        }
+        i{
+            font-size: 9rem;
+        }
+        .one{
+            top: 20%;
+            left: 0;
+        }
+        .two{
+            bottom: 14%;
+            right: 0;
+        }
+    }
+
     .counters{
         margin-top: 0;
         padding: 10rem 0;
@@ -671,7 +732,7 @@ nav{
         &__wrapper{
             flex-direction: row;
             justify-content: space-evenly;
-            // gap: 2rem;
+            gap: 3rem;
             padding: 2rem 2rem;
             &--logo{
                 p{
@@ -681,6 +742,7 @@ nav{
             &--items{
                 flex-direction:row;
                 gap: 1rem;
+                padding-right: 9rem;
                 a{
                     text-decoration: none;
                     font-size: 2rem;
