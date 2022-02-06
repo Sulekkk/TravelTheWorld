@@ -8,6 +8,10 @@ const rightBtn  = document.getElementById('right')
 const carouselBg = document.querySelector('.carousel')
 const menuItems = document.querySelectorAll('.item')
 const buttons = document.querySelectorAll('.ripple')
+const quoteSec = document.querySelector('.quote')
+const blockquote = document.querySelector('blockquote')
+const tripsSec = document.querySelector('.trips')
+const tripsImg = document.querySelector('.cla')
 
 const handleBurger = () =>{
     burger.classList.toggle('is-active')
@@ -50,36 +54,6 @@ counters.forEach(counter =>{
     window.addEventListener('scroll', startCounting)
 })
 
-
-let activeSlide = 0
-
-const changeRight = ()=>{
-    activeSlide++
-    if(activeSlide > slides.length -1){
-        activeSlide = 0
-    }
-    setBgToBody()
-    setActiveSlide()
-}
-const changeLeft = ()=>{
-    activeSlide-- 
-    if(activeSlide < 0){
-        activeSlide = slides.length +1
-    }
-    setBgToBody()
-    setActiveSlide()
-}
-
-const setBgToBody = ()=>{
-    carouselBg.style.backgroundImage = slides[activeSlide].style.backgroundImage
-}
-setBgToBody()
-
-const setActiveSlide = ()=>{
-    slides.forEach(slide => slide.classList.remove('active'))
-    slides[activeSlide].classList.add('active')
-}
-
 buttons.forEach(button => {
     button.addEventListener('click', (e) =>{
         const x = e.clientX
@@ -102,6 +76,40 @@ buttons.forEach(button => {
     })
 })
 
-rightBtn.addEventListener('click', changeRight)
-leftBtn.addEventListener('click', changeLeft)
+const showQuote = ()=>{
+    const quoteSecTop = quoteSec.getBoundingClientRect().top
+    
+    if(quoteSecTop < window.innerHeight / 5 * 4){
+        blockquote.classList.add('active')
+    }else{
+        blockquote.classList.remove('active')
+    }
+}
+const showImg = ()=>{
+    const tripsSecTop = tripsSec.getBoundingClientRect().top
+    
+    if(tripsSecTop < window.scrollY){
+        tripsImg.classList.add('show')
+    }
+}
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    autoplay: {
+        delay: 5000,
+      },
+  });
+
+window.addEventListener('scroll', showQuote)
+window.addEventListener('scroll', showImg)
+// rightBtn.addEventListener('click', changeRight)
+// leftBtn.addEventListener('click', changeLeft)
 burger.addEventListener('click', handleBurger)

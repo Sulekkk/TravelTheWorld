@@ -236,69 +236,101 @@ nav{
     }
 }
 
-.carousel{
-    width: 100%;
-    height: 50vh;
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s ease;
-    position: relative;
-    &__container{
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        height: 70%;
-        width: 80%;
-        position: relative;
-        overflow: hidden;
-        .slide{
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            background-position: center center;
-            background-size: cover;
-            transition: 0.4s ease;
+.trips{
+    &__wrapper{
+        .trip{
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 80%;
+                transform: translateX(-200%);
+                transition: 1s;
+            }
+            img.show{
+                transform: translateX(0);
+            }
+            p{
+                font-size: 1.6rem;
+            }
         }
-        .slide.active{
-            opacity: 1;
-
+        .two{
+            display: flex;
+            img{
+                align-self: center;
+            }
         }
-        .arrow{
-            position: absolute;
-            color: $white;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: transparent;
-            padding: 0.8rem;
-            font-size: 2.4rem; 
-            border: none;
-            z-index: 2;
-            cursor: pointer;
-        } 
-        .left-arrow{
-            left: 0;
-        }
-        .right-arrow{
-            right: 0;
+        .three{
+            display: flex;
+            img{
+                align-self: flex-end;
+            }
         }
     }
 }
 
-.carousel::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh;
-    background-color: rgba(0,0,0,0.7);
+.swiper {
+    width:90%;
+    padding: 3rem 0 5rem 0;
+    &__text{
+        text-align: center;
+        h4{
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+        p{
+            font-size: 1.6rem;
+            opacity: 50%;
+            margin:2rem 0;
+        }
+    }
+    &-pagination-bullet-active {
+        background-color: $secondary !important;
+    }
+    .swiper-slide{
+        img{
+            width: 100%;
+        }
+    }
 }
-.trips{
-    width: 100%;
-    height: 50vh;
-    background-color: #fff;
+
+.quote{
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    blockquote{
+        font-size: 3.6rem;
+        color: $primary;
+        transform: translateX(-180%);
+        transition: transform 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    blockquote::before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 40%;
+        background-color: $primary;
+        left: 50%;
+        top: -20%;
+        transform: translateX(-50%);
+    }
+    i{
+        position: absolute;
+        font-size: 7rem;
+        opacity: 10%;
+    }
+    .one{
+        top: 10%;
+        left: 5%;
+    }
+    .two{
+        bottom: 10%;
+        right: 5%;
+    }
+    blockquote.active{
+        transform: translateX(0);
+    }
 }
+
 .counters{
     background-position: center center;
     background-repeat: no-repeat;
@@ -356,38 +388,7 @@ nav{
         border-right: 3px solid $white;
     }
 }
-.quote{
-    padding: 5rem 2rem;
-    text-align: center;
-    position: relative;
-    blockquote{
-        font-size: 4rem;
-        color: $primary;
-    }
-    blockquote::before{
-        content: '';
-        position: absolute;
-        height: 2px;
-        width: 40%;
-        background-color: $primary;
-        left: 50%;
-        top: 12%;
-        transform: translateX(-50%);
-    }
-    i{
-        position: absolute;
-        font-size: 7rem;
-        opacity: 10%;
-    }
-    .one{
-        top: 10%;
-        left: 5%;
-    }
-    .two{
-        bottom: 10%;
-        right: 5%;
-    }
-}
+
 .footer{
     background-color: #000;
     width: 100%;
@@ -669,15 +670,21 @@ nav{
         border-right: 3px solid #000;
     }
 
-    .carousel{
-        height: 80vh;
-        &__container{
-            width: 80%;
-            height: 80%;
+    .swiper {
+        width:50%;
+        padding: 3rem 0 5rem 0;
+        &__text{
+            h4{
+                font-size: 5rem;
+            }
+            p{
+                font-size: 2rem;
+                margin:4rem 0;
+            }
         }
-    }
-    .carousel::before{
-        height: 80vh;
+        &-pagination-bullet-active {
+            background-color: $secondary !important;
+        }
     }
 
     .quote{

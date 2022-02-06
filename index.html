@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel the world</title>
     <script src="https://kit.fontawesome.com/d4b25b991d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="sass/hamburger/hamburger.css">
     <link rel="stylesheet" href="sass/animations.css">
     <link rel="stylesheet" href="sass/style.css">
@@ -166,22 +167,31 @@
         </div>
     </section>
 
-    <section class="carousel">
-        <div class="carousel__container">
-            <div class="slide" style="background-image: url('./images/carousel/chicago.jpg');"></div>
-
-            <div class="slide" style="background-image: url('./images/carousel/sea.jpg');"></div>
-
-            <div class="slide" style="background-image: url('./images/carousel/mountains.jpg');"></div>
-
-            <button class="arrow left-arrow" id="left">
-            <i class="fas fa-arrow-left"></i>
-            </button>
-            <button class="arrow right-arrow" id="right">
-            <i class="fas fa-arrow-right"></i>
-            </button>
+    <div class="swiper">
+        <div class="swiper__text">
+            <h4>Still need an inspiration?</h4>
+            <p>Take a look at one of ours favourite photos that allow us to remember places we visited thanks to the way of travelling we truly love.</p>
         </div>
-    </section>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img src="./images/carousel/sea.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+              <img src="./images/carousel/mountains.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+              <img src="./images/carousel/canyon.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+              <img src="./images/carousel/chicago.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+              <img src="./images/carousel/waterfall.jpg" alt="">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>  
+    </div>
+
 
     <section class="quote">
         <blockquote>It feels good to be lost in the right direction</blockquote>
@@ -212,7 +222,7 @@
         <div class="footer__wrapper">
             <div class="footer__wrapper--logo">
                 <p>TravelThe<span>World</span></p>
-            </div>
+            </div> 
             <div class="footer__wrapper--items">
                 <a href="#stories" class="item">stories</a>
                 <a href="#media" class="item">media</a>
@@ -229,6 +239,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
