@@ -11,7 +11,6 @@ const buttons = document.querySelectorAll('.ripple')
 const quoteSec = document.querySelector('.quote')
 const blockquote = document.querySelector('blockquote')
 const tripsSec = document.querySelector('.trips')
-const tripsImg = document.querySelector('.cla')
 
 const handleBurger = () =>{
     burger.classList.toggle('is-active')
@@ -85,13 +84,6 @@ const showQuote = ()=>{
         blockquote.classList.remove('active')
     }
 }
-const showImg = ()=>{
-    const tripsSecTop = tripsSec.getBoundingClientRect().top
-    
-    if(tripsSecTop < window.scrollY){
-        tripsImg.classList.add('show')
-    }
-}
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -109,7 +101,4 @@ const swiper = new Swiper('.swiper', {
   });
 
 window.addEventListener('scroll', showQuote)
-window.addEventListener('scroll', showImg)
-// rightBtn.addEventListener('click', changeRight)
-// leftBtn.addEventListener('click', changeLeft)
 burger.addEventListener('click', handleBurger)

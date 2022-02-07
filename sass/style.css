@@ -729,12 +729,15 @@ nav .desktop {
   nav .desktop .btn .nav-btn {
     background-color: #000;
     color: rgba(255, 255, 255, 0.8);
-    padding: 1rem 3rem;
+    padding: 0.9rem 3rem;
     border: none;
     letter-spacing: 0.2rem;
     overflow: hidden;
     cursor: pointer;
     position: relative;
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 100%;
   }
   nav .desktop .btn .nav-btn .circle {
     position: absolute;
@@ -1103,6 +1106,75 @@ nav .desktop {
   .footer__copy p {
     font-size: 1.2rem;
     margin-top: 2rem;
+  }
+}
+
+@media (max-width: 992px) and (orientation: landscape) {
+  nav {
+    padding: 2.5rem 0;
+  }
+  .first__pair .img {
+    height: 50vh;
+  }
+  .first__pair .text {
+    height: 50vh;
+  }
+  .first__pair .text h2 {
+    font-size: 2rem;
+  }
+  .first__pair .text p {
+    font-size: 1.2rem;
+  }
+  .stories__card {
+    height: 100vh;
+  }
+  .stories__card .card-img .content h3 {
+    font-size: 2.4rem;
+  }
+  .stories__card .card-img .content p {
+    font-size: 1.4rem;
+  }
+  .stories__card .card-text {
+    font-size: 1.3rem;
+  }
+  .stories__card .card-text p::first-letter {
+    font-size: 2rem;
+  }
+  .boxes {
+    width: 90%;
+  }
+  .boxes h2 {
+    font-size: 3rem;
+  }
+  .boxes h2 span::after {
+    bottom: -5px;
+  }
+  .boxes p {
+    font-size: 1.6rem;
+  }
+  .boxes__wrapper .box h3 {
+    font-size: 2.4rem;
+  }
+  .boxes__wrapper .box i {
+    font-size: 5rem;
+  }
+  .boxes__wrapper .box p {
+    font-size: 1.4rem;
+  }
+  .swiper {
+    width: 65%;
+  }
+  .swiper__text h4 {
+    font-size: 3rem;
+  }
+  .swiper__text p {
+    font-size: 1.6rem;
+  }
+  .quote {
+    width: 80%;
+  }
+  .counters__container span {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=style.css.map */

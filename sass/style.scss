@@ -539,12 +539,15 @@ nav{
                 .nav-btn{
                     background-color: #000;
                     color: rgba($color: #fff, $alpha: 0.8);
-                    padding: 1rem 3rem;
+                    padding: 0.9rem 3rem;
                     border: none;
                     letter-spacing:0.2rem;
                     overflow: hidden;
                     cursor: pointer;
                     position: relative;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    width: 100%;
                     .circle{
                         position: absolute;
                         background-color: #fff;
@@ -925,6 +928,98 @@ nav{
             p{
                 font-size: 1.2rem;
                 margin-top: 2rem;
+            }
+        }
+    }
+}
+
+
+
+@media(max-width:992px) and (orientation: landscape){
+    nav{
+        padding: 2.5rem 0;
+    }
+    
+    .first{
+        &__pair{
+            .img{
+                height: 50vh;
+            }
+            .text{
+                height: 50vh;
+                h2{
+                    font-size:2rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .stories{
+        &__card{
+            height: 100vh;
+            .card-img{
+                .content{
+                    h3{
+                        font-size: 2.4rem;
+                    }
+                    p{
+                        font-size:1.4rem;
+                    }
+                }
+            }
+            .card-text{
+                font-size: 1.3rem;
+                p::first-letter{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    .boxes{
+        width: 90%;
+        h2{
+            font-size: 3rem;
+            span::after{
+                bottom: -5px;
+            }
+        }
+        p{
+            font-size: 1.6rem;
+        }
+        &__wrapper{
+            .box{
+                h3{
+                    font-size: 2.4rem;
+                }
+                i{
+                    font-size: 5rem;
+                }
+                p{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    .swiper {
+        width:65%;
+        &__text{
+            h4{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .quote{
+        width: 80%;
+    }
+    .counters{
+        &__container{
+            span{
+                width: 60%;
             }
         }
     }
